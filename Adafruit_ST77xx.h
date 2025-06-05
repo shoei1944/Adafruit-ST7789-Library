@@ -31,11 +31,6 @@
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
 
-#define ST7735_TFTWIDTH_128 128  // for 1.44 and mini
-#define ST7735_TFTWIDTH_80 80    // for mini
-#define ST7735_TFTHEIGHT_128 128 // for 1.44" display
-#define ST7735_TFTHEIGHT_160 160 // for 1.8" and mini display
-
 #define ST_CMD_DELAY 0x80 // special signifier for command lists
 
 #define ST77XX_NOP 0x00

@@ -24,12 +24,8 @@
 
 #include "Adafruit_ST77xx.h"
 #include <limits.h>
-#if !defined(ARDUINO_STM32_FEATHER) && !defined(ARDUINO_UNOR4_WIFI)
-#if !defined(ARDUINO_UNOR4_MINIMA)
-#include "pins_arduino.h"
-#include "wiring_private.h"
-#endif
-#endif
+// #include "pins_arduino.h"
+// #include "wiring_private.h"
 #include <SPI.h>
 
 #define SPI_DEFAULT_FREQ 32000000 ///< Default SPI data clock frequency
@@ -108,7 +104,7 @@ void Adafruit_ST77xx::displayInit(const uint8_t *addr) {
       ms = pgm_read_byte(addr++); // Read post-command delay time (ms)
       if (ms == 255)
         ms = 500; // If 255, delay for 500 ms
-      delay(ms);
+      _delay_ms(ms);
     }
   }
 }
