@@ -25,6 +25,10 @@
 #ifndef _ADAFRUIT_ST77XXH_
 #define _ADAFRUIT_ST77XXH_
 
+#define BUFSIZE 256
+
+uint8_t sendbuf[BUFSIZE], recvbuf[BUFSIZE];
+
 #include "Arduino.h"
 #include "Print.h"
 #include <Adafruit_GFX.h>
